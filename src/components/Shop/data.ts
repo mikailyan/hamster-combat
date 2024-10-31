@@ -1,28 +1,28 @@
 const HeadsItems = [
-    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/duck-head_one.png'},
-    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/duck-head_one.png'},
-    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/duck-head_one.png'},
+    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/maincharacter.png'},
+    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/maincharacter.png'},
+    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/maincharacter.png'},
     
 ];
 
 const GlassesItems = [
-    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/duck-glasses.png'},
-    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/duck-glasses.png'},
-    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/duck-glasses.png'},
+    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/maincharacter.png'},
+    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/maincharacter.png'},
+    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/maincharacter.png'},
     
 ];
 
 const AccessoriesItems = [
-    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/duck-accessories.png'},
-    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/duck-accessories.png'},
-    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/duck-accessories.png'},
+    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/maincharacter.png'},
+    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/maincharacter.png'},
+    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/maincharacter.png'},
     
 ];
 
 const PaymentItems = [
-    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/ton_min.jpg'},
-    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/ton_middle.jpg'},
-    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/ton_random.jpg'},
+    {id: 1, itemId: 'cap', title: '', price: 550, description: 'Четверной сыр', image: '/maincharacter.jpg'},
+    {id: 2, itemId: 'glasses', title: ' ', price: 600, description: 'С кислинкой', image: '/maincharacter.jpg'},
+    {id: 3, itemId: 'accessories', title: '', price: 400, description: 'Баклажановый', image: '/maincharacter.jpg'},
     
 ];
 

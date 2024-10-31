@@ -8,8 +8,8 @@ const Shop = () => {
   const navigate = useNavigate(); // Инициализируем navigate
 
   return (
-    <div className='global'>
-      <main className='ma-in'>
+    <div className='bg-black flex justify-center'>
+      <main className='w-full bg-black text-white h-screen font-bold flex flex-col max-w-xl'>
         <div className="welcome">
           <button type="button" className='quit-text-shop' onClick={() => navigate('/')}> ← </button> {/* Заменяем router.push на navigate */}
           <div className='welcome-text-shop'> Добро пожаловать в магазин!</div>

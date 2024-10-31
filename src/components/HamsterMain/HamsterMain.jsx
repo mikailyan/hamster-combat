@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './HamsterMain.css';
 import '../../index.css'
 import Hamster from '../../icons/Hamster';
-//import { binanceLogo, dailyCipher, dailyCombo, dailyReward, dollarCoin, hamsterCoin, mainCharacter } from '../images';
+import { binanceLogo, dailyCipher, dailyCombo, dailyReward, dollarCoin, hamsterCoin, mainCharacter } from '../../images';
 import Info from '../../icons/Info';
 import Settings from '../../icons/Settings';
 import Mine from '../../icons/Mine';
 import Friends from '../../icons/Friends';
 import Coins from '../../icons/Coins';
 import {  BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
-//import Shop from './components/Shop/Shop';
 
 const HamsterMain = () => {
   const levelNames = [
@@ -140,6 +139,7 @@ const HamsterMain = () => {
         <div className="px-4 z-10">
           <div className="flex items-center space-x-2 pt-4">
             <div className="p-1 rounded-lg bg-[#1d2025]">
+            <Hamster size={24} className="text-[#d4d4d4]" />
             </div>
             <div>
               <p className="text-sm">Nikandr (CEO)</p>
@@ -160,16 +160,18 @@ const HamsterMain = () => {
               </div>
             </div>
             <div className="flex items-center w-full border-2 border-[#43433b] rounded-full px-4 py-[2px] bg-[#43433b]/[0.6] max-w-64">
-              <img alt="Exchange" className="w-8 h-8" />
+              <img src={binanceLogo} alt="Exchange" className="w-8 h-8" />
               <div className="h-[32px] w-[2px] bg-[#43433b] mx-2"></div>
               <div className="flex-1 text-center">
                 <p className="text-xs text-[#85827d] font-medium">Profit per hour</p>
                 <div className="flex items-center justify-center space-x-1">
-                  <img alt="Dollar Coin" className="w-[18px] h-[18px]" />
+                  <img src={dollarCoin} alt="Dollar Coin" className="w-[18px] h-[18px]" />
                   <p className="text-sm">{formatProfitPerHour(profitPerHour)}</p>
+                  <Info size={20} className="text-[#43433b]" />
                 </div>
               </div>
               <div className="h-[32px] w-[2px] bg-[#43433b] mx-2"></div>
+              <Settings className="text-white" />
             </div>
           </div>
         </div>
@@ -179,19 +181,19 @@ const HamsterMain = () => {
             <div className="px-4 mt-6 flex justify-between gap-2">
               <div className="bg-[#272a2f] rounded-lg px-4 py-2 w-full relative">
                 <div className="dot"></div>
-                <img alt="Daily Reward" className="mx-auto w-12 h-12" />
+                <img src={dailyReward} alt="Daily Reward" className="mx-auto w-12 h-12" />
                 <p className="text-[10px] text-center text-white mt-1">Daily reward</p>
                 <p className="text-[10px] font-medium text-center text-gray-400 mt-2">{dailyRewardTimeLeft}</p>
               </div>
               <div className="bg-[#272a2f] rounded-lg px-4 py-2 w-full relative">
                 <div className="dot"></div>
-                <img alt="Daily Cipher" className="mx-auto w-12 h-12" />
+                <img src={dailyCipher} alt="Daily Cipher" className="mx-auto w-12 h-12" />
                 <p className="text-[10px] text-center text-white mt-1">Daily cipher</p>
                 <p className="text-[10px] font-medium text-center text-gray-400 mt-2">{dailyCipherTimeLeft}</p>
               </div>
               <div className="bg-[#272a2f] rounded-lg px-4 py-2 w-full relative">
                 <div className="dot"></div>
-                <img alt="Daily Combo" className="mx-auto w-12 h-12" />
+                <img src={dailyCombo} alt="Daily Combo" className="mx-auto w-12 h-12" />
                 <p className="text-[10px] text-center text-white mt-1">Daily combo</p>
                 <p className="text-[10px] font-medium text-center text-gray-400 mt-2">{dailyComboTimeLeft}</p>
               </div>
@@ -199,7 +201,7 @@ const HamsterMain = () => {
 
             <div className="px-4 mt-4 flex justify-center">
               <div className="px-4 py-2 flex items-center space-x-2">
-                <img alt="Dollar Coin" className="w-10 h-10" />
+                <img src={dollarCoin} alt="Dollar Coin" className="w-10 h-10" />
                 <p className="text-4xl text-white">{points.toLocaleString()}</p>
               </div>
             </div>
@@ -210,7 +212,7 @@ const HamsterMain = () => {
                 onClick={handleCardClick}
               >
                 <div className="w-full h-full rounded-full circle-inner">
-                  <img alt="Main Character" className="w-full h-full" />
+                  <img src={mainCharacter} alt="Main Character" className="w-full h-full" />
                 </div>
               </div>
             </div>
@@ -220,21 +222,24 @@ const HamsterMain = () => {
 
       {/* Bottom fixed div */}
       <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-xl bg-[#272a2f] flex justify-around items-center z-50 rounded-3xl text-xs">
-        <button className="text-center text-[#85827d] w-1/5 bg-[#1c1f24] m-1 p-2 rounded-2xl">
-          <img  alt="Exchange" className="w-8 h-8 mx-auto" />
-          <p className="mt-1">Exchange</p>
+        <button className="text-center text-[#85827d] w-1/5 bg-[#1c1f24] m-1 p-2 rounded-2xl" onClick={() => navigate('/withdraw')}>
+          <img src={binanceLogo} alt="Withdraw" className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Withdraw</p>
         </button>
         <button type="button" className="text-center text-[#85827d] w-1/5" onClick={() => navigate('/shop')}>
-          <p className="mt-1">Mine</p>
+        <Mine className="w-8 h-8 mx-auto" />
+          <p className="mt-1">Shop</p>
         </button>
-        <button className="text-center text-[#85827d] w-1/5">
+        <button className="text-center text-[#85827d] w-1/5" onClick={() => navigate('/friends')}>
+        <Friends className="w-8 h-8 mx-auto" />
           <p className="mt-1">Friends</p>
         </button>
         <button className="text-center text-[#85827d] w-1/5">
+        <Coins className="w-8 h-8 mx-auto" />
           <p className="mt-1">Earn</p>
         </button>
         <button className="text-center text-[#85827d] w-1/5">
-          <img  alt="Airdrop" className="w-8 h-8 mx-auto" />
+          <img src={hamsterCoin} alt="Airdrop" className="w-8 h-8 mx-auto" />
           <p className="mt-1">Airdrop</p>
         </button>
       </div>

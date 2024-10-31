@@ -234,11 +234,11 @@ const HamsterMain = () => {
         <Friends className="w-8 h-8 mx-auto" />
           <p className="mt-1">Friends</p>
         </button>
-        <button className="text-center text-[#85827d] w-1/5">
+        <button className="text-center text-[#99127d] w-1/5">
         <Coins className="w-8 h-8 mx-auto" />
-          <p className="mt-1">Earn</p>
+          <p className="mt-1 ">Earn</p>
         </button>
-        <button className="text-center text-[#85827d] w-1/5">
+        <button className="text-center text-[#99127d] w-1/5">
           <img src={hamsterCoin} alt="Airdrop" className="w-8 h-8 mx-auto" />
           <p className="mt-1">Airdrop</p>
         </button>
